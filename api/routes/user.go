@@ -11,7 +11,7 @@ type UserRoutes struct {
 	logger         infrastructure.Logger
 	router         infrastructure.Router
 	userController controllers.UserController
-	middleware     middlewares.FirebaseAuthMiddleware
+	// middleware     middlewares.FirebaseAuthMiddleware
 	trxMiddleware  middlewares.DBTransactionMiddleware
 }
 
@@ -30,14 +30,14 @@ func NewUserRoutes(
 	logger infrastructure.Logger,
 	router infrastructure.Router,
 	userController controllers.UserController,
-	middleware middlewares.FirebaseAuthMiddleware,
+	// middleware middlewares.FirebaseAuthMiddleware,
 	trxMiddleware middlewares.DBTransactionMiddleware,
 ) UserRoutes {
 	return UserRoutes{
 		router:         router,
 		logger:         logger,
 		userController: userController,
-		middleware:     middleware,
+		// middleware:     middleware,
 		trxMiddleware:  trxMiddleware,
 	}
 }
