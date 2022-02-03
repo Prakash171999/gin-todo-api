@@ -4,7 +4,7 @@ import "go.uber.org/fx"
 
 // Module exports seed module
 var Module = fx.Options(
-	fx.Provide(NewAdminSeed),
+	// fx.Provide(NewAdminSeed),
 	fx.Provide(NewSeeds),
 )
 
@@ -25,9 +25,9 @@ func (s Seeds) Run() {
 
 // NewSeeds creates new seeds
 func NewSeeds(
-	adminSeed AdminSeed,
+	// adminSeed AdminSeed,
 ) Seeds {
 	return Seeds{
-		adminSeed,
+		// adminSeed,
 	}
 }

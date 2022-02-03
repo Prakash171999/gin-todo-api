@@ -22,7 +22,7 @@ services:
     environment:
       MYSQL_USER: root
       MYSQL_PASSWORD: secret
-      MYSQL_DATABASE: boilerplate
+      MYSQL_DATABASE: todos
     container_name: boilerplate-db
     command:
       [
